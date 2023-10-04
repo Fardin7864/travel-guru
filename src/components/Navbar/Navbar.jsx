@@ -23,7 +23,7 @@ const Navbar = () => {
     </>
   );
   
-  const navClass =  location.pathname === "/" ? "absolute navbar justify-between bg-base-100 px-10 text-white bg-transparent" : "navbar justify-between bg-base-100 px-10"
+  const navClass =  location.pathname === "/" || location.pathname === "/booking"  ? "absolute navbar justify-between bg-base-100 px-10 text-white bg-transparent" : "navbar justify-between bg-base-100 px-10"
   
   return (
     <div className={`${navClass}`}>

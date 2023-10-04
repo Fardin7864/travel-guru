@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {BsArrowRight, BsChevronLeft, BsChevronRight} from 'react-icons/bs'
 import { Link, useLocation } from "react-router-dom";
+import BookingCard from "../BookingCard/BookingCard";
 
 const Banner = () => {
     const location = useLocation();
@@ -47,7 +48,9 @@ const Banner = () => {
             long natural sandy beach, and it ...
           </p>
           { location.pathname === "/" &&
-          <Link to="/booking" className="py-3 px-7 flex items-center justify-center gap-4 mt-4 text-center bg-[#F9A51A] rounded-md text-base font-medium text-[#000]">Booking <BsArrowRight></BsArrowRight></Link>
+          <Link to="/booking" >
+          <button className="py-3 px-7 flex items-center justify-center gap-4 mt-4 text-center bg-[#F9A51A] rounded-md text-base font-medium text-[#000]">Booking <BsArrowRight></BsArrowRight></button>
+          </Link>
           }        
         </div>
         {location.pathname === "/" &&
@@ -96,6 +99,11 @@ const Banner = () => {
       `}</style>
     </div>
         </div>
+        }
+        { location.pathname === "/booking" &&
+            <div className=" w-3/4">
+                <BookingCard></BookingCard>
+            </div>
         }
       </div>
     </div>

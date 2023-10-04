@@ -1,9 +1,12 @@
+import Banner from "../../components/Banner/Banner";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Booking = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+        <Navbar></Navbar>   
+        <Banner></Banner>        
+        </>
     );
 };
 

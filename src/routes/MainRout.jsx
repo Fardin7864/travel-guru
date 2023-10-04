@@ -3,6 +3,7 @@ import Error from "../components/ErrorPage/Error";
 import Root from "../Root";
 import Home from "../pages/Home/Home";
 import Booking from "../pages/Booking/Booking";
+import RoomLists from "../pages/RoomLists/RoomLists";
 
 const MainRout = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const MainRout = createBrowserRouter([
             {
                 path: '/booking',
                 element: <Booking></Booking>
+            },
+            {
+                path: '/room',
+                element: <RoomLists></RoomLists>
             }
         ]
     }

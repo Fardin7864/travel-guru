@@ -1,0 +1,67 @@
+[
+    {
+      "_id": "ak2ljbck4lj",
+      "title": "Luxury Suite with Ocean View",
+      "guests": 2,
+      "bedrooms": 1,
+      "beds": 1,
+      "baths": 1,
+      "description": "Experience the ultimate luxury in our spacious suite with a stunning ocean view. Perfect for couples.",
+      "rating": 4.8,
+      "cost_per_night": 350.00,
+      "total_cost": 700.00,
+      "img": "https://i.ibb.co/YLfrnzv/Rectangle-28.png"
+    },
+    {
+      "_id": "kvkf34nc",
+      "title": "Deluxe Family Room",
+      "guests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "baths": 2,
+      "description": "Ideal for families, our deluxe room offers ample space and comfort for a relaxing stay.",
+      "rating": 4.5,
+      "cost_per_night": 250.00,
+      "total_cost": 1000.00,
+      "img": "https://i.ibb.co/FV8FJKg/Rectangle-26.png"
+    },
+    {
+      "_id": "abc123xyz",
+      "title": "Executive King Room",
+      "guests": 2,
+      "bedrooms": 1,
+      "beds": 1,
+      "baths": 1,
+      "description": "Indulge in our stylish executive room with a king-sized bed and modern amenities.",
+      "rating": 4.7,
+      "cost_per_night": 200.00,
+      "total_cost": 400.00,
+      "img": "https://i.ibb.co/mtMdnnS/Rectangle-27.png"
+    },
+    {
+      "_id": "def456uvw",
+      "title": "Premium Twin Room",
+      "guests": 2,
+      "bedrooms": 1,
+      "beds": 2,
+      "baths": 1,
+      "description": "Comfortable twin beds and a spacious layout make our premium room a great choice for your stay.",
+      "rating": 4.4,
+      "cost_per_night": 180.00,
+      "total_cost": 360.00,
+      "img": "https://i.ibb.co/YLfrnzv/Rectangle-28.png"
+    },
+    {
+      "_id": "ghi789rst",
+      "title": "Penthouse Suite with Jacuzzi",
+      "guests": 2,
+      "bedrooms": 1,
+      "beds": 1,
+      "baths": 2,
+      "description": "Experience the epitome of luxury in our penthouse suite with a private Jacuzzi and panoramic city views.",
+      "rating": 4.9,
+      "cost_per_night": 500.00,
+      "total_cost": 1000.00,
+      "img": "https://i.ibb.co/FV8FJKg/Rectangle-26.png"
+    }
+  ]
