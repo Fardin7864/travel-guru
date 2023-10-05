@@ -4,6 +4,9 @@ import Root from "../Root";
 import Home from "../pages/Home/Home";
 import Booking from "../pages/Booking/Booking";
 import RoomLists from "../pages/RoomLists/RoomLists";
+import Login from "../pages/Login/Login";
+import Signin from "../pages/SignIn/Signin";
+import PrivatRoute from "../providers/PrivatRoute";
 
 const MainRout = createBrowserRouter([
     {
@@ -21,7 +24,15 @@ const MainRout = createBrowserRouter([
             },
             {
                 path: '/room',
-                element: <RoomLists></RoomLists>
+                element: <PrivatRoute><RoomLists></RoomLists></PrivatRoute>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Signin></Signin>
             }
         ]
     }

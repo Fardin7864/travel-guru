@@ -1,7 +1,10 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import {BsSearch} from "react-icons/bs"
+import { useContext } from "react";
+import { AuthContext } from "../../providers/Authantication";
 const Navbar = () => {
     const location = useLocation();
+    const {user, logOut, userName} = useContext(AuthContext);
   const navLink = (
     <>
       <li className="lg:ml-6">
@@ -16,9 +19,14 @@ const Navbar = () => {
       <li className="lg:ml-6">
         <NavLink to='contact'>Contact</NavLink>
       </li>
-      <li className="lg:ml-6">
-        <button className="py-3 px-7 text-center bg-[#F9A51A] rounded-md text-base font-medium text-[#000]">Log In</button>
+      {
+        user ? <li className="lg:ml-6">
+        <Link onClick={logOut} className="py-3 px-7 text-center rounded-md text-base font-medium text-[#000]">{userName}</Link>
+      </li> : <li className="lg:ml-6">
+        <Link to='/login' className="py-3 px-7 text-center bg-[#F9A51A] rounded-md text-base font-medium text-[#000]">Log In</Link>
       </li>
+      }
+      
     </>
   );
   
