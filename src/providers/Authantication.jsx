@@ -59,6 +59,7 @@ const Authantication = ({children}) => {
         loginWithEmailAndPassword,
         socialLogIn,
         logOut,
+        userName,
     }
     return (
         <AuthContext.Provider value={authInfo}>

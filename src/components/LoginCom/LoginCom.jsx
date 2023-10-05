@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/Authantication";
 
 const LoginCom = () => {
@@ -11,6 +11,8 @@ const LoginCom = () => {
         })
         // error controler
         const [error, setError] = useState(null);
+        const location = useLocation();
+        const navigate = useNavigate();
     
         // set inpusts
         const handleInput = (e) => { 
@@ -20,9 +22,10 @@ const LoginCom = () => {
             })
          }
     
+         console.log(location)
     
         // get data from context
-        const {loginWithEmailAndPassword, user} = useContext(AuthContext);
+        const {loginWithEmailAndPassword} = useContext(AuthContext);
     
         const regex = /^(?=.*[A-Z])(?=.*\d).+/;
         // On submit form 
@@ -36,7 +39,9 @@ const LoginCom = () => {
             }
             else{
                 loginWithEmailAndPassword(formData.email, formData.password)
-                .then()
+                .then(() => { 
+                    navigate(location?.state ? location.state : '/')
+                 })
                 .catch(err => {
 
                     if (err.message === "Firebase: Error (auth/email-already-in-use).") {

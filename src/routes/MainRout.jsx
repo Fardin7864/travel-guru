@@ -7,6 +7,7 @@ import RoomLists from "../pages/RoomLists/RoomLists";
 import Login from "../pages/Login/Login";
 import Signin from "../pages/SignIn/Signin";
 import PrivatRoute from "../providers/PrivatRoute";
+import PrivatForlogin from "../providers/PrivatForlogin";
 
 const MainRout = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const MainRout = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <PrivatForlogin><Login></Login></PrivatForlogin>
             },
             {
                 path: '/signup',

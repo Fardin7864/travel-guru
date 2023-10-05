@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/Authantication";
 
 const SigninCom = () => {
@@ -37,6 +37,7 @@ const SigninCom = () => {
 
     // naviget
     const navigate = useNavigate();
+    const location = useLocation();
 
     const regex = /^(?=.*[A-Z])(?=.*\d).+/;
     // On submit form 
@@ -51,7 +52,7 @@ const SigninCom = () => {
         else{
             createName(formData.name)
             createUser(formData.email, formData.password)
-            .then(() => { navigate('/') })
+            .then(() => { navigate(location?.state ? location.state : '/') })
             .catch(err => {
                 if (err.message === "Firebase: Error (auth/email-already-in-use).") {
                     setError("This Email Address Already Used!")

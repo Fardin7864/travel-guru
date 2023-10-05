@@ -21,7 +21,7 @@ const Navbar = () => {
       </li>
       {
         user ? <li className="lg:ml-6">
-        <Link onClick={logOut} className="py-3 px-7 text-center rounded-md text-base font-medium text-[#000]">{userName}</Link>
+        <h4 onClick={logOut} className="py-3 px-7 text-center rounded-md text-base font-medium">{userName? userName : user.email}</h4>
       </li> : <li className="lg:ml-6">
         <Link to='/login' className="py-3 px-7 text-center bg-[#F9A51A] rounded-md text-base font-medium text-[#000]">Log In</Link>
       </li>

@@ -15,7 +15,6 @@ const RoomLists = () => {
         }
         loader();
      },[])
-     console.log(rooms);
     return (
         <>
         <Navbar></Navbar>
